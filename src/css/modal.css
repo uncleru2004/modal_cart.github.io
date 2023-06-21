@@ -1,0 +1,315 @@
+/*НАЧАЛО стилей для модального окна корзины */
+
+/* Стили для подложки 
+
+.overlay {
+   
+  /* Скрываем подложку  
+  opacity: 0;
+  visibility: hidden;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}*/
+
+/* Стили для модальных окон */
+
+.modal {
+  width: calc(100% - 400px);
+  overflow-x: hidden;
+  height: 715px;
+  position: relative;
+  scrollbar-gutter: stable;
+  
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+  text-align: center;
+  padding: 30px;
+  border-radius: 4px;
+  border: 0;
+  border-bottom: 10px solid var(--accent-color);
+  background-color: #fff;
+  transition: 0.4s all;
+}
+
+/*dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}*/
+
+/* Стили для верхней панели*/
+
+.modal_header {
+  position: fixed;
+  width: calc(100% - 400px);
+  z-index: 1;
+  top: 10%;
+  background-color: var(--body-color);
+  padding-bottom: 40px;
+} 
+
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  transition: 0.2s ease;  
+}
+
+.cross-btn {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+  
+}
+
+.cross-btn:hover .modal__cross {
+  opacity: 0.65;
+}
+
+.modal.active,
+.overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+/* КОНЕЦ стилей для модального окна корзины*/
+
+.modal-body__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-body__wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #17183b;
+  margin: 20px 0 15px 0px;
+}
+
+.total_price {
+  font-weight: 700;
+  font-size: 20px;
+  color: #17183b;
+  margin-bottom: 20px;
+}
+
+.modal-title span {
+  color: #a3a4b3;
+}
+
+.basket-modal-list {
+  width: 100%;
+}
+
+.list-item {
+  position: relative;
+  display: flex;
+  
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.list-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  bottom: -32px;
+  left: 0;
+  width: 100%;
+  background: #d1d1d8;
+  height: 1px;  
+}
+
+.list-item-img {
+  width: 160px;
+  height: 160px;
+  margin-right: 36px;
+  object-fit: cover;
+}
+
+
+
+.item-descr-info__info {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item-descr-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #17183b;
+  margin-bottom: 16px;
+}
+
+.item-descr-color span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #a2a3b1;
+  margin-right: 12px;
+}
+
+.item-descr-color {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #17183b; 
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.item-descr-delete {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #e14b4b;
+  margin-left: 10px;
+  transition: 0.2s ease;
+}
+
+.item-descr-delete:hover {
+  opacity: 0.65;
+}
+
+.item-descr-delete .modal__cross {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  fill: #e14b4b;
+}
+
+.price {
+  display: inline-block;
+  margin-left: 250px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #17183b;
+}
+
+.login-footer {
+  padding: 24px 24px 38px 24px;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+ 
+/* Firefox 
+input[type=number] {
+  -moz-appearance: textfield;
+}*/
+
+.modal-body__summary {
+  position: sticky;
+  top: 100px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 380px;
+  height: 589px;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+}
+
+.modal-body__summary h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--title-color);
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.modal-body__summary--table_raw.top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.modal-body__summary--table_raw.bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.summary_shipping {
+  color: var(--accent-color);
+}
+
+.summary_total,
+.summary_delivery {
+  font-weight: 600;
+}
+
+.hor_rule {
+  height: 1px;
+  background-color: var(--border-color);
+  margin-bottom: 32px;
+}
+
+.coupon__field {
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 56px;
+  margin-bottom: 24px;
+}
+
+.coupon__field svg {
+  margin-right: 16px;
+}
+
+#coupon__input {
+  border: 0;
+  width: 100%;
+  padding: 16px 56px 16px 16px;  
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;  
+  margin: 0;
+}

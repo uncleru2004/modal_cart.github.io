@@ -1,0 +1,33 @@
+:root {
+  --body-color: #ffffff; /* общий фон */
+
+
+  --title-color: #17183B; /* цвет заголовков */
+  --subtitle-color: #42526B;/* цвет подзаголовков */
+
+  --nav-link-color: #17183B; /* цвет ссылок в навигации */
+
+  --accent-color: #3AA39F; /* основной цвет тем */
+
+  --bg-hover: #F7F7F7;
+  --border-color: #D1D1D8; /* основной цвет рамок */
+}
+
+/* btn-primary */
+.btn-primary {
+  --button-bg-color: #3AA39F;
+  --button-text-color: #ffffff;
+}
+
+
+/* forms */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+textarea {
+  --input-bg-color: #ffffff;
+  --input-border-color: #B0B0B0;
+  outline: none;
+}
+

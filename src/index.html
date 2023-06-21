@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping cart</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+  <header class="header flex">
+    
+        <a class="header-logo" href="./index.html">
+          <img src="./images/logo.svg" alt="logo">
+        </a>
+
+        <nav class="header-nav">
+          <a class="nav-link active" href="/">SHOP</a>
+          <a class="nav-link" href="#">COLLECTIVE</a>
+          <a class="nav-link" href="#">DESIGNERS</a>
+          <a class="nav-link" href="#">ABOUT US</a>
+          <a class="nav-link" href="#">CONTACT</a>
+        </nav>
+
+        <div class="header-buttons flex">
+          <button class="btn-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20" stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7 6H17" stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8 18H16" stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <button class="btn-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21 21L16.65 16.65" stroke="#17183B" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <button id="open-basket" class="btn-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15 22C14.4477 22 14 21.5523 14 21C14 20.4477 14.4477 20 15 20C15.5523 20 16 20.4477 16 21C16 21.5523 15.5523 22 15 22Z"
+                stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M4 22C3.44772 22 3 21.5523 3 21C3 20.4477 3.44772 20 4 20C4.55228 20 5 20.4477 5 21C5 21.5523 4.55228 22 4 22Z"
+                stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M23 1H19L16.32 14.39C16.2286 14.8504 15.9781 15.264 15.6125 15.5583C15.2468 15.8526 14.7893 16.009 14.32 16H4.6C4.1307 16.009 3.67318 15.8526 3.30754 15.5583C2.94191 15.264 2.69145 14.8504 2.6 14.39L1 6H18"
+                stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="number_of_items" hidden></div>
+          </button>
+        </div>
+
+      
+    
+  </header>
+
+  <main>
+    <div class="items-list">
+      <div class="container">
+        <div class="items-wrapper">
+          <!-- items-wrapper -->
+        </div>
+      </div>
+    </div>
+
+    <section class="slider">
+      <div class="container">
+        <h2 class="title">Merchandise</h2>
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper"></div>
+          <!-- swiper-wrapper -->
+
+          <div class="swiper-scrollbar skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Модальное окно -->
+    <dialog id="modal-window" class="modal">
+      <!--   Svg иконка для закрытия окна  -->
+      <header class="modal_header">
+        <button id="cross" class="cross-btn">
+          <svg class="modal__cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path class="modal___cross"
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+          </svg>
+        </button>
+
+        <div>
+          <h3 class="modal-title">Cart: 
+            <span class="quantity"></span> itm.
+          </h3>          
+        </div>
+      </header>
+
+      <div class="modal-body__box">
+        <div class="modal-body__wrapper">
+          <ul class="basket-modal-list">
+            <!-- Карточки товаров в корзине -->
+          </ul>
+        </div>
+
+        <div class="modal-body__summary">
+          <h3>Order Summary</h3>
+          
+          <div class="modal-body__summary--price_info">
+            <div class="modal-body__summary--table_raw top">
+              <span class="left_side">Price</span>
+              <span class="summary_price right_side">0</span>
+            </div>
+
+            <div class="modal-body__summary--table_raw top">
+              <span class="left_side">Discount</span>
+              <span class="summary_discount right_side">0</span>
+            </div>
+
+            <div class="modal-body__summary--table_raw top">
+              <span class="left_side">Shipping</span>
+              <span class="summary_shipping right_side">Free</span>
+            </div>
+
+            <div class="modal-body__summary--table_raw top">
+              <span class="left_side">Coupon Applied</span>
+              <span class="summary_coupon right_side">0</span>
+            </div>
+
+            <div class="hor_rule"></div>
+
+            <div class="modal-body__summary--table_raw bottom">
+              <span class="left_side">TOTAL</span>
+              <span class="summary_total right_side">0</span>
+            </div>
+
+            <div class="modal-body__summary--table_raw bottom">
+              <span class="left_side">Estimated delivery by</span>
+              <span class="summary_delivery right_side">01 Feb, 2023</span>
+            </div>
+
+          </div>
+          
+          <label class="coupon__field">
+            <input id="coupon__input" type="text" placeholder="Coupon Code">
+
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.59 13.41L13.42 20.58C13.2343 20.766 13.0137 20.9135 12.7709 21.0141C12.5281 21.1148 12.2678 21.1666 12.005 21.1666C11.7422 21.1666 11.4819 21.1148 11.2391 21.0141C10.9963 20.9135 10.7757 20.766 10.59 20.58L2 12V2H12L20.59 10.59C20.9625 10.9647 21.1716 11.4716 21.1716 12C21.1716 12.5284 20.9625 13.0353 20.59 13.41V13.41Z" stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 7H7.01" stroke="#17183B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
+          </label>
+
+          <button class="add-btn">Proceed to Checkout</button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Подложка под модальным окном 
+    <div class="overlay" id="overlay-modal"></div>-->
+
+  </main>
+  </div>
+
+  <script src="lib/swiper.js"></script>
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+[
+    {
+        "name" : "Armchair",
+        "category" : "Chair",
+        "price" : "50.25",
+        "imgSrc" : "images/help-image-1.jpg"
+    },
+    {
+        "name" : "Bed",
+        "category" : "Bed",
+        "price" : "102.00",
+        "imgSrc" : "images/help-image-2.jpg"
+    },
+    {
+        "name" : "Bench",
+        "category" : "Bench",
+        "price" : "15.00",
+        "imgSrc" : "images/help-image-3.jpg"
+    },
+    {
+        "name" : "Bunk bed",
+        "category" : "Bed",
+        "price" : "23.75",
+        "imgSrc" : "images/help-image-4.jpg"
+    },
+    {
+        "name" : "Cabinet",
+        "category" : "Cabinet",
+        "price" : "50.00",
+        "imgSrc" : "images/help-image-5.jpg"
+    },
+    {
+        "name" : "Card table",
+        "category" : "Table",
+        "price" : "200.50",
+        "imgSrc" : "images/help-image-6.jpg"
+    },
+    {
+        "name" : "Cushion",
+        "category" : "Cushion",
+        "price" : "5.50",
+        "imgSrc" : "images/help-image-7.jpg"
+    },
+    {
+        "name" : "Desk",
+        "category" : "Desk",
+        "price" : "25.00",
+        "imgSrc" : "images/help-image-8.jpg"
+    },
+    {
+        "name" : "Drawer",
+        "category" : "Drawer",
+        "price" : "49.00",
+        "imgSrc" : "images/help-image-9.jpg"
+    },
+    {
+        "name" : "Office chair",
+        "category" : "Chair",
+        "price" : "60.99",
+        "imgSrc" : "images/help-image-10.jpg"
+    },
+    {
+        "name" : "Scissors chair",
+        "category" : "Chair",
+        "price" : "69.20",
+        "imgSrc" : "images/help-image-11.jpg"
+    },
+    {
+        "name" : "Sleeper sofa",
+        "category" : "Sofa",
+        "price" : "224.99",
+        "imgSrc" : "images/help-image-12.jpg"
+    },
+    {
+        "name" : "Sleigh bed",
+        "category" : "Bed",
+        "price" : "90.25",
+        "imgSrc" : "images/help-image-13.jpg"
+    },
+    {
+        "name" : "Sofa bed",
+        "category" : "Bed",
+        "price" : "99.99",
+        "imgSrc" : "images/help-image-14.jpg"
+    },
+    {
+        "name" : "White armchair",
+        "category" : "Chair",
+        "price" : "75.80",
+        "imgSrc" : "images/help-image-15.jpg"
+    },
+    {
+        "name" : "White sofa",
+        "category" : "Sofa",
+        "price" : "159.00",
+        "imgSrc" : "images/help-image-16.jpg"
+    },
+    {
+        "name" : "Wing chair",
+        "category" : "Chair",
+        "price" : "100.50",
+        "imgSrc" : "images/help-image-17.jpg"
+    }
+]
